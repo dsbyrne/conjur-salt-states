@@ -1,0 +1,15 @@
+---
+salt-master:
+  build: docker/master
+  volumes:
+    - ./salt:/srv/
+    - ./tmp/app-identity.yml:/root/app-identity.yml
+  external_links:
+    - conjur
+
+salt-minion:
+  build: docker/minion
+  links:
+    - salt-master:salt
+  ports:
+    - 80

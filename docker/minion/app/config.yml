@@ -1,0 +1,6 @@
+---
+port: 80
+mongoPassword: DATABASE_PASSWORD
+mongoUsername: DATABASE_USERNAME
+sslCertificate: CERTIFICATE
+sslPrivateKey:  PRIVATE_KEY
